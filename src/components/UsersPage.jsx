@@ -36,11 +36,11 @@ const UsersPage = () => {
                         <Card key={user.email} className="m-3 p-2">
                             <Row>
                                 <Col xl={2}>
-                                    <img src={user.photo} style={{width:'100px'}}/>
+                                    <img src={user.photo?user.photo:'http://via.placeholder.com/120X150'} style={{width:'100px'}}/>
                                 </Col>
                                 <Col xl={10}>
-                                    <h4>{user.name} : {user.email}</h4>
-                                    <div>{user.address}</div>
+                                    <h4 style={{paddingTop:'30px'}}>{user.name? user.name:'정보없음'} : {user.email}</h4>
+                                    <div>{user.address?user.address:'정보없음'}</div>
                                 </Col>
                             </Row>
                         </Card>

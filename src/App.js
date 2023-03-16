@@ -9,10 +9,11 @@ import { UserContext } from './components/UserContext';
 import { useState } from 'react';
 import { ColorContext } from './components/ColorContext';
 import FooterPage from './components/FooterPage';
+import MyPage from './components/MyPage';
 
 function App() {
     const [user, setUser] = useState('');
-    const [color,setColor] = useState('primary');
+    const [color,setColor] = useState('dark');
     return (
         <ColorContext.Provider value={{color,setColor}}>
             <UserContext.Provider value={{user, setUser}}>
@@ -23,6 +24,7 @@ function App() {
                         <Route path="/users" component={UsersPage}/>
                         <Route path="/chats" component={ChatsPage}/>
                         <Route path="/login" component={LoginPage}/>
+                        <Route path="/mypage" component={MyPage}/>
                     </Switch>
                     
                 </div>

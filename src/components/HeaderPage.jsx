@@ -51,7 +51,7 @@ const HeaderPage = ({history}) => {
                         {(user && user.photo) && 
                             <img src={user.photo} style={{width:'50px', borderRadius:'50%'}}/>}
                         {(user && user.name) && 
-                            <Link to="mypage">{user.name}님</Link>
+                            <Link to="/mypage">{user.name}님</Link>
                         }
                       
                     </div>    
